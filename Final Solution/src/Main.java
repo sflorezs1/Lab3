@@ -8,15 +8,14 @@ import java.util.Scanner;
  */
 public class Main {
     
-    private static boolean isIn(int[] forbiddens, int item){
-        for (int forbidden : forbiddens) if (item == forbidden) return true;
+    private static boolean isIn(int[] forbidden, int item){
+        for (int banned : forbidden) if (item == banned) return true;
         return false;
     }
 
     public static void main(String[] args) {
         System.out.print("Input? ");
         try {
-            StringBuilder answer = new StringBuilder();
             Scanner sc = new Scanner(new File(new Scanner(System.in).nextLine()));
             int testCases = Integer.parseInt(sc.nextLine());
             for (int i = 0; i < testCases; i++) {
